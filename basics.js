@@ -131,7 +131,30 @@ console.log(add(1)); //prints 4,
 console.log(add(1, y=3)); //prints 4, use param to set val if both has init val
 
 
-// built ins - see mdn ref docs
+// built ins - see mdn ref docs for more
 "test".toUpperCase();
 
 
+// TYPE COERCION
+// 1 == "1" , converted to number then compares
+// 1 === "1" , compares directly(also checks the data type)
+// use triple as default when comparing
+
+// HIGHER ORDER FUNCTIONS
+//  function that accepts functions as parameters and/or returns a function.
+
+// array methods - map, filter, reduce
+arr = [1,2,3,4];
+
+// for every iteration, set the value to x and  apply this function
+let map = arr.map( (x) => return x );
+
+// filter, return if condition is true
+let filter arr.filter( (x) => {
+    return x % 2 === 0;
+});
+
+// 
+let reduce = arr.reduce( (accumulator, current) => {
+    return accumulator + current; 
+});
