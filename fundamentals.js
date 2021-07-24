@@ -5,7 +5,7 @@ var x = 23; // global
 x = "xyz";
 x = 'xyz';
 x = true;
-const y = 23; // static
+const y = 23; // static, no re-assignment
 let z = 23; // scope based
 
 
@@ -107,7 +107,7 @@ do {
 
 
 // BREAK AND CONTINUE = works only inside loops
-// break => stops the loop immediately
+// break => stops the loop immediately,
 // then go to outside and proceed to next statement
 for (score of scores) {
     if (score == 1) break; // if 1 statement only, ommmit braces
@@ -139,4 +139,21 @@ console.log(add(1, y=3)); //prints 4, use param to set val if both has init val
 // 1 == "1" , converted to number then compares
 // 1 === "1" , compares directly(also checks the data type)
 // use triple as default when comparing
+
+
+
+// CALLBACKS 
+// - callbacks are the default of async javascript, see asynchronous.js for language updates
+// callbacks is a function passed as parameter to other function, and this callback is called in the future
+// is a function that gets executed inside other function
+
+function theCallback(name) {
+    console.log("Hi" + name)
+}
+
+function withCallbackFunction (name, theCallback) {
+    theCallback(name)
+}
+
+withCallbackFunction("Carl", theCallback);
 
